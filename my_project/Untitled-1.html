@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .note {
+            background-color: #f9f9f9;
+            border-left: 4px solid #007bff;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .attendee, .action-item {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+        .remove-btn {
+            margin-left: 10px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Meeting Notes</h1>
+    
+    <h2>Date:</h2>
+    <input type="date" id="meetingDate">
+
+    <h2>Attendees:</h2>
+    <div id="attendeeList"></div>
+    <button onclick="addAttendee()">Add Attendee</button>
+
+    <h2>Agenda:</h2>
+    <textarea id="agenda" rows="4" placeholder="List agenda items here..."></textarea>
+
+    <h2>Notes:</h2>
+    <div class="note">
+        <textarea id="meetingNotes" rows="6" placeholder="Insert notes from the meeting here..."></textarea>
+    </div>
+
+    <h2>Action Items:</h2>
+    <div id="actionItemList"></div>
+    <button onclick="addActionItem()">Add Action Item</button>
+
+    <h2>Next Meeting:</h2>
+    <input type="datetime-local" id="nextMeeting">
+
+  
